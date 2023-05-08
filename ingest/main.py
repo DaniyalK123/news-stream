@@ -71,9 +71,7 @@ def main():
     publisher = create_pubsub_publisher()
     topic_path = publisher.topic_path(PUBSUB_PROJECT_ID, PUBSUB_TOPIC)
     
-    print(articles)
 
-    print("GONNA PUBLISH NOW")
     for article in articles:
         data = json.dumps(article).encode('utf-8')
         future = publisher.publish(topic_path, data=data)

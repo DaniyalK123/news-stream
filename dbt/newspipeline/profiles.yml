@@ -1,0 +1,13 @@
+# profiles.yml
+default:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: "{{ env_var('BIGQUERY_PROJECT') }}"
+      dataset: "{{ env_var('BIGQUERY_DATASET') }}"
+      threads: 1
+      timeout_seconds: 300
+      location: "{{ env_var('BIGQUERY_LOCATION') }}"
+      keyfile_json: "{{ env_var('BIGQUERY_KEYFILE_JSON') }}"

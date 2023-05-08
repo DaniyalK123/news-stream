@@ -1,0 +1,33 @@
+# models/schema.yml
+version: 2
+
+models:
+  - name: dim_dates
+    description: "Dimension table for dates"
+    columns:
+      - name: date_id
+        description: "Unique identifier for each date"
+        tests:
+          - unique
+          - not_null
+      # Other column descriptions
+
+  - name: dim_sources
+    description: "Dimension table for news sources"
+    columns:
+      - name: source_id
+        description: "Unique identifier for each news source"
+        tests:
+          - unique
+          - not_null
+      # Other column descriptions
+
+  - name: fact_articles
+    description: "Fact table for news articles"
+    columns:
+      - name: article_id
+        description: "Unique identifier for each article (URL)"
+        tests:
+          - unique
+          - not_null
+      # Other column descriptions
