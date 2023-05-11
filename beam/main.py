@@ -91,13 +91,3 @@ def run(argv=None, save_main_session=True):
 if __name__ == '__main__':
     run()
 
-
-'''
-python main.py \
-  --input_topic "projects/$GCP_PROJECT_ID/topics/$INPUT_TOPIC" \
-  --output_table "$GCP_PROJECT_ID:$GCP_RAW_TABLE" \
-  --project $GCP_PROJECT_ID \
-  --region $GCP_REGION \
-  --zone europe-west3-a
-  --temp_location gs://news-data-pipeline-processing/temp
-'''
